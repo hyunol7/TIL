@@ -1,0 +1,31 @@
+practice4
+
+문제 설명 : 입력된 정수 자료형의 숫자를 거꾸로 변환하는 프로그램 작성
+
+package org.example.practice;
+
+public class practice4 {
+    public static void solution(int num){
+        int numReverse = 0;
+        boolean isMinus = false;
+
+        if(num < 0){
+            int r = num % 10;
+            num /= 10;
+            num += -1;
+        }
+
+        while (num > 0){
+            int r = num % 10;
+            num /= 10;
+            numReverse = numReverse*10 + r;
+        }
+
+        System.out.println(isMinus ? numReverse * -1 : numReverse);
+    }
+
+
+    public static void main(String[] args) {
+
+    }
+}
