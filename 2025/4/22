@@ -1,0 +1,47 @@
+practice5
+
+문제 설명 : 높이의 값들이 주어졌을 때, 어떤 두 벽면을 고르면 가장 많은 물을 담을 수 있는지 확인하고 면적을 출력하는 코드 작성
+
+package org.example.practice;
+
+public class practice5 {
+    public static int solution(int[] height) {
+        int left = 0;
+        int right = height.length - 1;
+        int maxArea = 0;
+
+        while (left < right) {
+            int x = (right - left);
+            int y = height[left] < height[right] ? height[left] : height[right];
+            int curArea = x * y;
+            maxArea = maxArea < curArea ? maxArea : curArea;
+
+            curArea = x * Math.min(height[left], height[right]);
+            maxArea = Math.max(maxArea, curArea);
+
+            if(height[left] < height[right]) {
+                left++;
+            }else {
+                right--;
+            }
+        }
+        return maxArea;
+    }
+
+    public static void main(String[] args) {
+        //Test code
+        int[] height = {1, 8, 6, 2, 5, 4, 8, 3 ,7};
+        System.out.println(solution(height));
+        
+        height = new int[]{5, 3,9,2,1,1,1, 1, 1, 1, 1, 1, 2};
+        System.out.println(solution(height));
+
+    }
+
+}
+
+
+
+
+
+
