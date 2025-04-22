@@ -1,31 +1,103 @@
 practice4
 
-문제 설명 : 입력된 정수 자료형의 숫자를 거꾸로 변환하는 프로그램 작성
+문제 설명 : 별 출력 행의 수 N과 별 타입 T가 주어질 때 해당 별 모형을 출력하는 프로그램 작성
 
 package org.example.practice;
 
-public class practice4 {
-    public static void solution(int num){
-        int numReverse = 0;
-        boolean isMinus = false;
+public class practice5 {
 
-        if(num < 0){
-            int r = num % 10;
-            num /= 10;
-            num += -1;
+    public static void solution(int n, int type){
+        if(type == 1){
+            type1(n);
+        }else if(type == 2){
+            type2(n);
+        }else if(type == 3){
+            type3(n);
+        }else if(type == 4){
+            type4(n);
+        }else if(type == 5){
+            type5(n);
+        }
+    }
+
+    public static void type1(int n){
+        System.out.println("== Type1 ==");
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+    public static void type2(int n){
+        System.out.println("== Type2 ==");
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < i + 1; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+            System.out.println();
+    }
+    public static void type3(int n){
+        System.out.println("== Type3 ==");
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                if(j < n-i-1){
+                    System.out.print("");
+                }else {
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+    public static void type4(int n){
+        System.out.println("== Type4 ==");
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n - i - 1; j++){
+                System.out.print("*");
+            }
+            for(int j= 0; j < i *2; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+    public static void type5(int n) {
+        System.out.println("== Type5 ==");
+        for(int i = 0; i <= n / 2; i++){
+            for(int j = 0; j < n / 2; j++){
+                System.out.print("");
+            }
+            for(int j = 0; j < i * 2 + 1; j++){
+                System.out.print("*");
+            }
+            System.out.println();
         }
 
-        while (num > 0){
-            int r = num % 10;
-            num /= 10;
-            numReverse = numReverse*10 + r;
+        for(int i = n / 2; i > 0; i-- ){
+            for(int j = 0; j < i * 2; j++){
+                System.out.print(" ");
+            }
+            for(int j = 0; j < i * 2; j++){
+                System.out.print("*");
+            }
+            System.out.println();
         }
-
-        System.out.println(isMinus ? numReverse * -1 : numReverse);
+        System.out.println();
     }
 
 
     public static void main(String[] args) {
 
+        solution(3,1);
+        solution(3,2);
+        solution(3,3);
+        solution(3,4);
+        solution(7,5);
     }
 }
