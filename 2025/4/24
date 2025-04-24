@@ -1,0 +1,41 @@
+practice7
+
+문제 설명 : 정수형 숫자를 로마 숫자 표기로 변환하는 프로그램 작성
+
+package org.example.practice;
+
+public class practice7 {
+
+    /**
+     * 정수를 로마 숫자로 변환하는 메서드
+     * @param num 변환할 정수
+     * @return 로마 숫자 문자열
+     */
+    public static String solution(int num) {
+        StringBuilder result = new StringBuilder();
+
+        // 로마 숫자 대응표
+        String[] roman = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+        int[] values =  {1000, 900, 500, 400, 100,  90,  50,  40,  10,   9,   5,   4,   1};
+
+        // 가장 큰 값부터 차례대로 빼면서 로마 숫자 조합
+        for (int i = 0; i < values.length; i++) {
+            while (num >= values[i]) {
+                num -= values[i];
+                result.append(roman[i]);
+            }
+        }
+
+        return result.toString();
+    }
+
+    public static void main(String[] args) {
+        // 예시 출력
+        System.out.println(practice7.solution(3));    // III
+        System.out.println(practice7.solution(4));    // IV
+        System.out.println(practice7.solution(6));    // VI
+        System.out.println(practice7.solution(13));   // XIII
+        System.out.println(practice7.solution(26));   // XXVI
+        System.out.println(practice7.solution(1994)); // MCMXCIV
+    }
+}
