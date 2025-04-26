@@ -1,0 +1,70 @@
+practice8
+
+문제 설명 : 편집기에 문자열과 명령어들이 주어졌을 때, 편집을 완료한 후의 문자열을 출력하는 프로그램 작성   
+
+package org.example.practice;
+
+import java.util.ArrayList;
+
+public class practice8 {
+
+    /**
+     * 문자열 편집기처럼 명령어를 받아 문자열을 조작하는 함수
+     * @param input 초기 문자열
+     * @param cmd 명령어 문자열 (공백으로 구분)
+     * @return 명령어 수행 후 최종 문자열
+     */
+    public static String Solution(String input, String cmd) {
+        StringBuilder sb = new StringBuilder(input); // 초기 문자열 설정
+        ArrayList<String> cmdArr = new ArrayList<>();
+
+        // 명령어를 공백 기준으로 나누어 리스트에 저장
+        for (String s : cmd.split(" ")) {
+            cmdArr.add(s);
+        }
+
+        int cursor = sb.length(); // 커서는 문자열 끝에서 시작
+        int cmdIdx = 0; // 현재 명령어 인덱스
+
+        while (cmdIdx < cmdArr.size()) {
+            String curCmd = cmdArr.get(cmdIdx);
+
+            switch (curCmd) {
+                case "L": // 커서를 왼쪽으로 이동 (0보다 작아지지 않게)
+                    cursor = Math.max(0, cursor - 1);
+                    break;
+                case "D": // 커서를 오른쪽으로 이동 (문자열 길이를 넘지 않게)
+                    cursor = Math.min(sb.length(), cursor + 1);
+                    break;
+                case "B": // 커서 왼쪽 문자 삭제
+                    if (cursor > 0) {
+                        sb.deleteCharAt(cursor - 1);
+                        cursor--;
+                    }
+                    break;
+                case "P": // 커서 위치에 문자 삽입
+                    if (cmdIdx + 1 < cmdArr.size()) { // 다음에 삽입할 문자가 있을 때만
+                        String s = cmdArr.get(++cmdIdx);
+                        sb.insert(cursor, s);
+                        cursor++;
+                    }
+                    break;
+                default:
+                    // 잘못된 명령어는 무시
+                    break;
+            }
+
+            cmdIdx++;
+        }
+
+        return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        // 테스트 케이스
+        System.out.println(Solution("aba", "L B"));            // 출력 예상: "aa"
+        System.out.println(Solution("abcd", "P x L P y"));      // 출력 예상: "abcxyd"
+        System.out.println(Solution("abc", "L L L P x L B P y"));// 출력 예상: "yxbc"
+        System.out.println(Solution("a", "B B L L D D P a P b P c")); // 출력 예상: "abc"
+    }
+}
