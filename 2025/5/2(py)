@@ -1,0 +1,77 @@
+practice1
+
+ 파이썬 기초 수학 / 약수와 소수 , 소인수와 소인수분해
+ 
+
+-파이썬을 이용해서 사용자가 입력한 숫자의 약수를 출력하는 코드
+ 
+ inputumber = int(input('0보다 큰 정수 입력 : '))
+
+for number in range(1, inputumber + 1):
+    if inputumber % number == 0:
+        print('{}의 약수 : {}'.format(inputumber, number))
+
+
+-파이썬을 이용해서 사용자가 입력한 숫자까지의 소수를 출력
+
+inputumber = int(input('0보다 큰 정수 입력 : '))
+
+for number in range(2, inputumber + 1):
+    flag = True
+    for n in range(2, number):
+        if number % n == 0:
+            flag = False
+            break
+
+    if (flag):
+        print('{} : 소수!!'.format(number))
+    else:
+        print('{} : 합성수!!'.format(number))
+
+-파이썬을 이용해서 사용자가 입력한 수를 소인수분해 해보기
+
+inputumber = int(input('0보다 큰 정수 입력 : '))
+
+n = 2
+while n <= inputumber:
+    if inputumber % n == 0:
+        print('소인수: {}'.format(n))
+        inputumber /= n
+    else:
+        n += 1
+
+-72에 x를 곱하면 y의 제곱이 된다고 할 때, x에 해당하는 가장 작은 정수를 구해보기
+
+inputNumber = int(input('0보다 큰 정수 입력 : '))
+
+n = 2
+searchNumbers = []
+while n <= inputNumber:
+    if inputNumber % n == 0:
+        print('소인수: {}'.format(n))
+        if searchNumbers.count(n) == 0:
+            searchNumbers.append(n)
+        elif searchNumbers.count(n) == 1:
+            searchNumbers.remove(n)
+        inputNumber /= n
+    else:
+        n += 1
+
+print('searchNumbers: {}'.format(searchNumbers))
+
+
+-파이썬을 이용해서 사용자가 입력한 수를 소인수분해 해보기﻿
+
+inputNumber = int(input('0보다 큰 정수 입력 : '))
+
+n = 2
+searchNumbers = []
+while n <= inputNumber:
+    if inputNumber % n == 0:
+        print('소인수: {}'.format(n))
+        inputNumber /= n
+    else:
+        n += 1
+
+
+
