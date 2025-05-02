@@ -1,0 +1,65 @@
+practice9
+
+문제 설명 : 정수로 이루어진 MxN 행렬 데이터가 있다고 가정할 때, 행렬의 원소 중에 이 있을 경우 해당 원소가 위치하는 행과 열 전체 데이터를 으로 변경하는 코드 작성
+
+package org.example.practice;
+
+public class practice9 {
+
+    public static void solution(int[][] matrix) {
+        boolean frZero = false;
+        boolean fcZero = false;
+
+        for(int i = 0; i < matrix.length; i++) {
+            for(int j = 0; j < matrix[i].length; j++) {
+                if(matrix[i][j] == 0) {
+                    if(i == 0){
+                        frZero = true;
+                    }
+                    if(j == 0){
+                        fcZero = true;
+                    }
+                    matrix[i][0] = 0;
+                    matrix[0][j] = 0;
+                }
+            }
+        }
+        for(int i = 0; i < matrix.length; i++) {
+            for(int j = 0; j < matrix[i].length; j++) {
+                if(matrix[i][0] == 0 || matrix[0][j] == 0) {
+                    matrix[i][j] = 0;
+                }
+            }
+        }
+        if(frZero) {
+            for(int i = 0; i < matrix.length; i++) {
+                matrix[0][i] = 0;
+            }
+        }
+        if(fcZero) {
+            for(int i = 0; i < matrix.length; i++) {
+                matrix[i][0] = 0;
+            }
+        }
+        for(int i = 0; i < matrix.length; i++) {
+            for(int j = 0; j < matrix[i].length; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        int[][] matrix = {{1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
+        solution(matrix);
+
+        System.out.println();
+        matrix = new int[][] {{1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
+        solution(matrix);
+
+    }
+
+
+}
+
+
