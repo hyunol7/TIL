@@ -1,0 +1,110 @@
+practice2
+
+ 파이썬 기초 수학 / 최대공약수 / 최소공배수  
+ 
+-두 개의 수를 입력하면 공약수와 최대공약수를 출력하는 코드 작성
+
+num1 = int(input('1보다 큰 정수 입력 : '))
+num2 = int(input('1보다 큰 정수 입력 : '))
+maxNum = 0
+
+for i in range(1, (num1 + 1)):
+    if num1 % i == 0 and num2 % 1 == 0:
+        print('공약수: {}'.format(i))
+        maxNum = i
+
+print('최대공약수: {}'.format(maxNum))
+
+
+-호제법을 이용하여 최대 공약수 구하기 1
+
+num1 = int(input('1보다 큰 정수 입력 : '))
+num2 = int(input('1보다 큰 정수 입력 : '))
+a, b = num1, num2
+
+while b != 0:
+    a, b = b, a % b
+
+print('{}, {}의 최대공약수: {}'.format(num1, num2, a))
+
+
+-호제법을 이용하여 최대 공약수 구하기 2
+
+num1 = int(input('1보다 큰 정수 입력 : '))
+num2 = int(input('1보다 큰 정수 입력 : '))
+a, b = num1, num2
+
+for n in range(1, (a + 1)):
+    if a % n == 0:
+        print('{}, {}의 공약수: {}'.format(num1, num2, a))
+
+
+
+-두 개의 수를 입력하면 최소공배수를 출력하는 코드
+num1 = int(input('1보다 큰 정수 입력 : '))
+num2 = int(input('1보다 큰 정수 입력 : '))
+maxNum = 0
+
+for i in range(1, (num1 + 1)):
+    if num1 % 1 == 0 and num2 % 1 == 0:
+        print('공약수: {}'.format(i))
+        maxNum = i
+
+print('최대공약수: {}'.format(maxNum))
+
+minNum = (num1 * num2) // maxNum
+print('최소공배수: {}'.format(minNum))
+
+
+
+-세 개의 수를 입력하면 최소공배수를 출력하는 코드 작성
+num1 = int(input('1보다 큰 정수 입력 : '))
+num2 = int(input('1보다 큰 정수 입력 : '))
+num3 = int(input('1보다 큰 정수 입력 : '))
+maxNum = 0
+
+for i in range(1, (num1 + 1)):
+    if num1 % 1 == 0 and num2 % 1 == 0:
+        maxNum = i
+
+print('최대공약수: {}'.format(maxNum))
+
+minNum = (num1 * num2) // maxNum
+print('{}, {}의 최소공배수: {}'.format(num1, num2, minNum))
+
+newNum = minNum
+for i in range(1, (newNum + 1)):
+    if newNum % i == 0 and num3 % i == 0:
+        maxNum = i
+
+print('최대공약수: {}'.format(maxNum))
+
+minNum = (newNum * num3) // maxNum
+print('{}, {}, {}의 최소공배수: {}'.format(num1, num2, num3, minNum))
+
+
+
+-섬마을에 과일, 생선, 야채를 판매하는 배가 다음 주기로 입향한다고 할 때, 모든 배가 입항하는 날짜를 계산하는 코드 작성
+
+ship1 = 3; ship2 = 4; ship3 = 5;
+maxDay = 0
+
+for i in range(1, (ship1 + 1)):
+    if ship1 % 1 == 0 and ship2 % 1 == 0:
+        maxDay = 1
+
+print('최대공약수: {}'.format(maxDay))
+
+minDay = (ship1 * ship2) // maxDay
+print('{},{}의 최소공배수: {}'.format(ship1, ship2, maxDay))
+
+newDay = minDay
+
+for i in range(1, (ship1 + 1)):
+    if ship1 % 1 == 0 and ship2 % 1 == 0:
+        maxDay = 1
+
+print('최대공약수: {}'.format(maxDay))
+
+minDay = (ship1 * ship2) // maxDay
+print('{},{}, {}의 최소공배수: {}'.format(ship1, ship2, ship3, maxDay))
