@@ -1,0 +1,76 @@
+practice11
+
+문제 설명 : 입력 문자열에서 괄호 짝 검사하여 이상이 없는지 판별하는 프로그램 작성
+괄호의 종류 : (), {}, []
+짝 이상이 없으면 pass / 이상이 있으면 Fail 출력
+
+package org.example.practice;
+
+import java.util.HashMap;
+import java.util.Stack;
+
+public class practice11 {
+
+    // 괄호 짝 검사 함수
+    public static void solution(String str){
+        Stack<String> stack = new Stack<>();  // 괄호 저장용 스택
+        boolean checkFlag = true;  // 괄호가 올바른지 판단하는 플래그
+
+        // 여는 괄호 → 닫는 괄호 매핑
+        HashMap<String, String> map = new HashMap<>();
+        map.put("(", ")");
+        map.put("{", "}");
+        map.put("[", "]");
+
+        // 입력 문자열을 한 글자씩 확인
+        for (String s : str.split("")) {
+
+            // 여는 괄호일 경우 → 스택에 추가
+            if(map.containsKey(s)){
+                stack.push(s);
+
+                // 닫는 괄호일 경우
+            } else if (map.containsValue(s)) {
+
+                // 닫는 괄호인데 스택이 비어있으면 실패
+                if(stack.isEmpty()){
+                    checkFlag = false;
+                    break;
+                } else {
+                    // 스택에서 여는 괄호 하나 꺼내기
+                    String cur = stack.pop();
+
+                    // 매칭되는 괄호가 아닐 경우 실패
+                    if(!s.equals(map.get(cur))){
+                        checkFlag = false;
+                        break;
+                    }
+                }
+            }
+        }
+
+        // 모든 괄호가 짝을 이루었고, 스택이 비어있다면 성공
+        if(checkFlag && stack.isEmpty()){
+            System.out.println("Pass");
+        } else {
+            System.out.println("Fail");
+        }
+    }
+
+    public static void main(String[] args) {
+        // 테스트 케이스 실행
+        solution("[yyyy]-[mm]-[dd]");
+        solution("System.out.println(arr[0][1))");
+        solution("Support [Java or Python(3.x)]");
+        solution("([[{}])");
+    }
+}
+
+
+실행 결과
+Pass
+Fail
+Pass
+Fail
+
+
