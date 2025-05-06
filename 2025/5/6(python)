@@ -1,0 +1,52 @@
+practice3
+
+진법
+
+-특정 숫자 몇 개를 사용하여 수를 표시하는 방법
+
+10진수를 x진수로 변환
+dNum = 30
+
+print('2진수: {}'.format(bin(dNum)))
+print('8진수: {}'.format(oct(dNum)))
+print('16진수: {}'.format(hex(dNum)))
+
+x진수를 10진수로 변환
+
+dNum = 30
+
+print('2진수(0b11110) -> 10진수({})'.format(int('0b11110', 2)))
+print('8진수(0o36) -> 10진수({})'.format(int('0o36', 8)))
+print('16진수(0x1e) -> 10진수({})'.format(int('0x1e', 16))
+
+
+
+등차 수열
+
+-연속된 두 항의 차이가 일정한 수열
+
+n번째 항의 값을 출력하는 프로그램 작성
+
+a = {2, 5, 8, 11, 14, 17, 20, 23, 26 29}
+
+inputN1 = int(input('a1 입력: '))
+inputND = int(input('공차 입력: '))
+inputN = int(input('n 입력: '))
+
+valueN = 0
+n = 1
+while n <= inputN:
+
+    if n == 1:
+        valueN = inputN1
+        print('{}번째 항의 값 : {}'.format(n, valueN))
+        n += 1
+        continue
+
+    valueN += inputND
+    print('{}번째 항의 값 : {}'.format(n, valueN))
+    n += 1
+
+print('{}번째 항의 값 : {}'.format(inputN, valueN))
+
+
