@@ -1,0 +1,47 @@
+practice3
+
+박스에 '꽝'이 적힌 종이가 4장, '선물'이 적힌 종이가 3장 있을 때, 파이썬을 이용해서 꽝 2장과 선물 1장을 뽑는 확률을 출력
+
+# 순열, 조합, 확률을 계산하는 함수
+def proFun():
+    # 사용자로부터 n, r 입력 받기
+    numN = int(input('numN 입력: '))  # 전체 요소 개수
+    numR = int(input('numR 입력: '))  # 선택할 요소 개수
+
+    resultP = 1  # 순열 결과 저장
+    resultR = 1  # r! 저장용
+    resultC = 1  # 조합 결과 저장
+
+    # 순열 계산: nPr = n × (n-1) × ... × (n - r + 1)
+    for n in range(numN, (numN - numR), -1):
+        resultP = resultP * n
+    print('resultP: {}'.format(resultP))  # 순열 출력
+
+    # r! 계산
+    for n in range(numR, 0, -1):
+        resultR = resultR * n
+    print('resultR: {}'.format(resultR))  # r! 출력
+
+    # 조합 계산: nCr = nPr / r!
+    resultC = int(resultP / resultR)
+    print('resultC: {}'.format(resultC))  # 조합 출력
+
+    return resultC  # 조합 결과 반환
+
+# 첫 번째 조합값 (sample space)
+sample = proFun()
+print('sample: {}'.format(sample))
+
+# 두 번째 조합값 (event 1)
+event = proFun()
+print('event: {}'.format(event))
+
+# 세 번째 조합값 (event 2)
+event2 = proFun()
+print('event2: {}'.format(event2))
+
+# 확률 계산: (event1 * event2) / sample space
+probability = (event * event2) / sample
+
+# 최종 확률 결과를 백분율로 출력
+print('probability:{}%'.format(round(probability * 100, 2)))
