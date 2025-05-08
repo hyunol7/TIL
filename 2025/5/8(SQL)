@@ -1,0 +1,85 @@
+- 쿼리 모음을 만들자
+1. trainer 테이블에 있는 모든 데이터를 보여주는 SQL 쿼리를 작성해주세요
+SELECT 
+  *
+FROM `basic.trainer`
+
+2. pokemon 테이블에서 "피카츄"의 공격력과 체력을 확인할 수 있는 쿼리를 작성해주세요
+SELECT
+  kor_name,
+  attack,
+  hp
+FROM `basic.pokemon`
+WHERE
+  kor_name = "피카츄"
+
+3. pokemon 테이블에 있는 포켓몬 수를 구하는 쿼리를 작성해주세요
+  SELECT
+  COUNT(id) AS pokemon
+FROM `basic.pokemon`
+
+4. 포켓몬의 수가 세대별로 얼마나 있는지 알 수 있는 쿼리를 작성해주세요
+SELECT
+  generation,
+  COUNT(id) AS id
+FROM `basic.pokemon`
+GROUP BY
+  generation
+5. 포켓몬의 수를 타입 별로 집계하고, 포켓몬의 수가 10 이상인 타입만 남기는 쿼리를 작성해주세요. 포켓몬의 수가 많은 순으로 정렬해주세요
+SELECT
+  type1,
+  COUNT(id) AS pokemon
+FROM `basic.pokemon`
+GROUP BY
+ type1
+HAVING 
+  pokemon >= 10
+ORDER BY pokemon DESC
+
+
+1. 트레이너가 포켓몬을 포획한 날짜(catch_date)를 기준으로, 2023년 1월에 포획한 포켓몬의 수를 계산해주세요.
+SELECT
+  COUNT(DISTINCT pokemon_id) AS catch
+FROM `basic.trainer-pokemon`
+WHERE
+  EXTRACT(YEAR FROM DATETIME(catch_datetime ,"Asia/Seoul")) = 2023
+  AND EXTRACT(MONTH FROM DATETIME(catch_datetime, "Asia/Seoul")) = 1
+  
+2. 배틀이 일어난 시간(battle_datetime)을 기준으로, 오전 6시에서 오후 6시 사이에 일어난 배틀의 수를 계산해주세요.
+SELECT
+  COUNT(id) AS cnt_battle,
+FROM `basic.battle`
+WHERE
+  EXTRACT(HOUR FROM battle_datetime) >= 6
+  AND EXTRACT(HOUR FROM battle_datetime) <= 18
+  
+3. 각 트레이너별로 그들이 포켓몬을 포획한 첫 날(catch_date)을 찾고, 그 날짜를 'DD/MM/YYYY' 형식으로 출력해주세요.
+(2024-01-01 => 01/01/2024)
+SELECT
+  trainer_id,
+  FORMAT_DATETIME("%d/%m/%Y" ,MIN(catch_date)) AS first_date
+FROM `basic.trainer-pokemon`
+GROUP BY
+  trainer_id
+ORDER BY
+  trainer_id  
+
+4. 배틀이 일어난 날짜(battle_date)를 기준으로, 요일별로 배틀이 얼마나 자주 일어났는지 계산해주세요.
+SELECT
+  EXTRACT(DAYOFWEEK FROM battle_data) AS week_battle,
+  COUNT(*) AS cnt 
+FROM `basic.battle`
+GROUP BY 
+  week_battle
+ORDER BY 
+  week_battle DESC
+  
+5. 트레이너가 포켓몬을 처음으로 포획한 날짜와 마지막으로 포획한 날짜의 간격이 큰 순으로 정렬하는 쿼리를 작성해주세요.
+SELECT
+  trainer_id,
+  DATE_DIFF(MAX(catch_date), MIN(catch_date), DAY) AS catch_date
+FROM `basic.trainer-pokemon`
+GROUP BY
+  trainer_id
+ORDER BY
+  trainer_id DESC
