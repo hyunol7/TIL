@@ -1,0 +1,33 @@
+조건절 
+==
+
+#### if문
++ 조건에 따라 코드를 실행할지 결정하는 제어
+```
+if 10 > 20:
+    print(True)
+else:
+    print(False)
+```
+> False
+#### elif 추가
++ else: 모든 조건이 거짓일 때 실행
++ elif: 다른 조건도 확인할 때 사용
+```
+if 10 > 10:
+    print(True)
+elif 10 > 6:
+    print("Hello")
+else:
+    print(False)
+```
+> "Hello"
+```
+if int(input("How tall are you in cm?")) > 180:
+    print("You are over 180")
+else:
+    print("You are less than 180")
+```
+> 180 이하의 숫자를 입력할 경우 You are less than 180
+> 180 보다 큰 숫자를 입력했을 경우 You are over 180
+
