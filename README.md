@@ -50,7 +50,8 @@
 + [파이썬 중급](https://github.com/hyunol7/TIL/tree/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%A4%91%EA%B8%89)
     + [class](https://github.com/hyunol7/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%A4%91%EA%B8%89/01.class.md)
     + [class constructor](https://github.com/hyunol7/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%A4%91%EA%B8%89/02.class%20constructor.md)
-
+    + [Method](https://github.com/hyunol7/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%A4%91%EA%B8%89/03.Method.md)
+    + [import class](https://github.com/hyunol7/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%A4%91%EA%B8%89/04.import%20class.md)
 ### 개념정리
 + [컴퓨터 3대 구성 요소 이해](https://github.com/hyunol7/TIL/blob/main/%EA%B0%9C%EB%85%90%EC%A0%95%EB%A6%AC/%EC%BB%B4%ED%93%A8%ED%84%B0%203%EB%8C%80%20%EA%B5%AC%EC%84%B1%20%EC%9A%94%EC%86%8C%20%EC%9D%B4%ED%95%B4.md)
 
