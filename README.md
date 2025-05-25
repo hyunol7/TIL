@@ -42,6 +42,7 @@
 + [파라미터를 받는 함수](https://github.com/hyunol7/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EA%B8%B0%EC%B4%88/13.%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0%EB%A5%BC%20%EB%B0%9B%EB%8A%94%20%ED%95%A8%EC%88%98.md)
 + [Dictionary](https://github.com/hyunol7/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EA%B8%B0%EC%B4%88/14.Dictionary.md)
 + [Nested data structure](https://github.com/hyunol7/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EA%B8%B0%EC%B4%88/15.Nested%20data%20structure.md)
++ [Assignment, Shallow Copy, Deep Copy차이점](https://github.com/hyunol7/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EA%B8%B0%EC%B4%88/16.Assignment%2C%20Shallow%20Copy%2C%20Deep%20Copy%EC%B0%A8%EC%9D%B4%EC%A0%90.md)
 + [문자열 뒤집기](https://github.com/hyunol7/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EA%B8%B0%EC%B4%88/%EB%AC%B8%EC%9E%90%EC%97%B4%20%EB%92%A4%EC%A7%91%EA%B8%B0.md)
 + [소수 찾기](https://github.com/hyunol7/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EA%B8%B0%EC%B4%88/%EC%86%8C%EC%88%98%20%EC%B0%BE%EA%B8%B0.md)
 
