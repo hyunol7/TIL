@@ -2,6 +2,8 @@
 + 배운 것을 기록하는 습관을 들이기 위한 목적 :pencil2:
 + 좀 더 자세하게 기록하고 싶은 것은 [블로그](https://fgcxvsd265.tistory.com/) 에 남기고 있다.
 ----
+### AB Test
++[AB Test](https://github.com/hyunol7/TIL/blob/main/AB%20Test/01.AB%20Test.md)
 ### BigQuery
 + [BigQuery 문제풀이](https://github.com/hyunol7/TIL/tree/main/BigQuery/%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4)
 + [BigQuery](https://github.com/hyunol7/TIL/blob/main/BigQuery/01.BigQuery.md)
@@ -27,6 +29,34 @@
 + [지표 리텐션 접근 방법](https://github.com/hyunol7/TIL/blob/main/BigQuery/%EC%A7%80%ED%91%9C%2C%20%EB%A6%AC%ED%85%90%EC%85%98%20%EC%A0%91%EA%B7%BC%20%EB%B0%A9%EB%B2%95.md)
 
 ### Python
++[Pandas](https://github.com/hyunol7/TIL/tree/main/Python/Pandas)
+    +[통계 분석]()
+        +[기초통계](https://github.com/hyunol7/TIL/tree/main/Python/%ED%86%B5%EA%B3%84%EB%B6%84%EC%84%9D/%EA%B8%B0%EC%B4%88%20%ED%86%B5%EA%B3%84)
+            +[확률분포](https://github.com/hyunol7/TIL/blob/main/Python/%ED%86%B5%EA%B3%84%EB%B6%84%EC%84%9D/%EA%B8%B0%EC%B4%88%20%ED%86%B5%EA%B3%84/01.%ED%99%95%EB%A5%A0%20%EB%B6%84%ED%8F%AC.md)
+            +[연속 확률 분포](https://github.com/hyunol7/TIL/blob/main/Python/%ED%86%B5%EA%B3%84%EB%B6%84%EC%84%9D/%EA%B8%B0%EC%B4%88%20%ED%86%B5%EA%B3%84/02.%EC%97%B0%EC%86%8D%20%ED%99%95%EB%A5%A0%20%EB%B6%84%ED%8F%AC.md)
+            +[주요 이산 확률 분포](https://github.com/hyunol7/TIL/blob/main/Python/%ED%86%B5%EA%B3%84%EB%B6%84%EC%84%9D/%EA%B8%B0%EC%B4%88%20%ED%86%B5%EA%B3%84/03.%EC%A3%BC%EC%9A%94%20%EC%9D%B4%EC%82%B0%20%ED%99%95%EB%A5%A0%20%EB%B6%84%ED%8F%AC.md)
+        +[상관 분석](https://github.com/hyunol7/TIL/tree/main/Python/%ED%86%B5%EA%B3%84%EB%B6%84%EC%84%9D/%EC%83%81%EA%B4%80%EB%B6%84%EC%84%9D)
+            +[상관분석](https://github.com/hyunol7/TIL/blob/main/Python/%ED%86%B5%EA%B3%84%EB%B6%84%EC%84%9D/%EC%83%81%EA%B4%80%EB%B6%84%EC%84%9D/01.%EC%83%81%EA%B4%80%EB%B6%84%EC%84%9D.md)
+            +[상관계수](https://github.com/hyunol7/TIL/blob/main/Python/%ED%86%B5%EA%B3%84%EB%B6%84%EC%84%9D/%EC%83%81%EA%B4%80%EB%B6%84%EC%84%9D/02.%EC%83%81%EA%B4%80%EA%B3%84%EC%88%98.md)
+            +[pandas](https://github.com/hyunol7/TIL/blob/main/Python/%ED%86%B5%EA%B3%84%EB%B6%84%EC%84%9D/%EC%83%81%EA%B4%80%EB%B6%84%EC%84%9D/03.pandas.md)
+            +[시각화](https://github.com/hyunol7/TIL/blob/main/Python/%ED%86%B5%EA%B3%84%EB%B6%84%EC%84%9D/%EC%83%81%EA%B4%80%EB%B6%84%EC%84%9D/04.%EC%8B%9C%EA%B0%81%ED%99%94.md)
+        +[통계](https://github.com/hyunol7/TIL/tree/main/Python/%ED%86%B5%EA%B3%84%EB%B6%84%EC%84%9D/%ED%86%B5%EA%B3%84)
+            +[통계 개념](https://github.com/hyunol7/TIL/blob/main/Python/%ED%86%B5%EA%B3%84%EB%B6%84%EC%84%9D/%ED%86%B5%EA%B3%84/01.%ED%86%B5%EA%B3%84%20%EA%B0%9C%EB%85%90.md)
+            +[Variance](https://github.com/hyunol7/TIL/blob/main/Python/%ED%86%B5%EA%B3%84%EB%B6%84%EC%84%9D/%ED%86%B5%EA%B3%84/02.Variance.md)
+            +[Standard Deviation](https://github.com/hyunol7/TIL/blob/main/Python/%ED%86%B5%EA%B3%84%EB%B6%84%EC%84%9D/%ED%86%B5%EA%B3%84/03.Standard%20Deviation.md)
+            +[Skewness](https://github.com/hyunol7/TIL/blob/main/Python/%ED%86%B5%EA%B3%84%EB%B6%84%EC%84%9D/%ED%86%B5%EA%B3%84/04.Skewness.md)
+            +[Kurtosis](https://github.com/hyunol7/TIL/blob/main/Python/%ED%86%B5%EA%B3%84%EB%B6%84%EC%84%9D/%ED%86%B5%EA%B3%84/05.Kurtosis.md)
+            +[IQR](https://github.com/hyunol7/TIL/blob/main/Python/%ED%86%B5%EA%B3%84%EB%B6%84%EC%84%9D/%ED%86%B5%EA%B3%84/06.IQR.md)
+            +[Coefficient of Variation](https://github.com/hyunol7/TIL/blob/main/Python/%ED%86%B5%EA%B3%84%EB%B6%84%EC%84%9D/%ED%86%B5%EA%B3%84/07.Coefficient%20of%20Variation.md)
++[시계열](https://github.com/hyunol7/TIL/tree/main/Python/%EC%8B%9C%EA%B3%84%EC%97%B4)
+    +[시계열 데이터](https://github.com/hyunol7/TIL/blob/main/Python/%EC%8B%9C%EA%B3%84%EC%97%B4/01.%EC%8B%9C%EA%B3%84%EC%97%B4%20%EB%8D%B0%EC%9D%B4%ED%84%B0.md)
+    +[Window Function](https://github.com/hyunol7/TIL/tree/main/Python/%EC%8B%9C%EA%B3%84%EC%97%B4)
+    +[데이터 시프트와 차분](https://github.com/hyunol7/TIL/blob/main/Python/%EC%8B%9C%EA%B3%84%EC%97%B4/03.%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%8B%9C%ED%94%84%ED%8A%B8%EC%99%80%20%EC%B0%A8%EB%B6%84.md)
+    +[시계열 분석 지원 함수](https://github.com/hyunol7/TIL/blob/main/Python/%EC%8B%9C%EA%B3%84%EC%97%B4/04.%EC%8B%9C%EA%B3%84%EC%97%B4%20%EB%B6%84%EC%84%9D%20%EC%A7%80%EC%9B%90%20%ED%95%A8%EC%88%98.md)
+    +[시계열 데이터의 이해와 분해](https://github.com/hyunol7/TIL/blob/main/Python/%EC%8B%9C%EA%B3%84%EC%97%B4/05.%EC%8B%9C%EA%B3%84%EC%97%B4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%9D%98%20%EC%9D%B4%ED%95%B4%EC%99%80%20%EB%B6%84%ED%95%B4.md)
+    +[Smoothing with Moving Average](https://github.com/hyunol7/TIL/blob/main/Python/%EC%8B%9C%EA%B3%84%EC%97%B4/06.Smoothing%20with%20Moving%20Average.md)
+    +[Forecasting with Holt-Winters](https://github.com/hyunol7/TIL/blob/main/Python/%EC%8B%9C%EA%B3%84%EC%97%B4/07.Forecasting%20with%20Holt-Winters.md)
++[통계분석](https://github.com/hyunol7/TIL/tree/main/Python/%ED%86%B5%EA%B3%84%EB%B6%84%EC%84%9D)
 + [파이썬 기초](https://github.com/hyunol7/TIL/tree/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EA%B8%B0%EC%B4%88)
     + [subscript](https://github.com/hyunol7/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EA%B8%B0%EC%B4%88/01.subscript.md)
     + [Type error](https://github.com/hyunol7/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EA%B8%B0%EC%B4%88/02.Type%20error.md)
@@ -60,6 +90,16 @@
     + [Iterate Pandas dataframe](https://github.com/hyunol7/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%A4%91%EA%B8%89/10.Iterate%20Pandas%20dataframe.md)
     + [Advanced Python arguments](https://github.com/hyunol7/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%A4%91%EA%B8%89/11.Advanced%20Python%20arguments.md)
     + [Try except](https://github.com/hyunol7/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%A4%91%EA%B8%89/12.Try%20except.md)
+    + [Datetime module](https://github.com/hyunol7/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%A4%91%EA%B8%89/13.Datetime%20module.md)
+    +[Data typing](https://github.com/hyunol7/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%A4%91%EA%B8%89/14.Data%20typing.md)
+      [User defined error](https://github.com/hyunol7/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%A4%91%EA%B8%89/15.User%20defined%20error.md)
+      +[Class \ Static method](https://github.com/hyunol7/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%A4%91%EA%B8%89/16.Class%20%5C%20Static%20method.md)
+      +[Map \ Filter function](https://github.com/hyunol7/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%A4%91%EA%B8%89/17.Map%20%5C%20Filter%20function.md)
+      +[Lambda expression](https://github.com/hyunol7/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%A4%91%EA%B8%89/18.Lambda%20expression.md)
+      +[Special \ Magic method](https://github.com/hyunol7/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%A4%91%EA%B8%89/19.Special%20%5C%20Magic%20method.md)
+      +[Generator](https://github.com/hyunol7/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%A4%91%EA%B8%89/20.Generator.md)
+      +[Collections module](https://github.com/hyunol7/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%A4%91%EA%B8%89/21.Collections%20module.md)
+      
 ### 개념정리
 + [컴퓨터 3대 구성 요소 이해](https://github.com/hyunol7/TIL/blob/main/%EA%B0%9C%EB%85%90%EC%A0%95%EB%A6%AC/%EC%BB%B4%ED%93%A8%ED%84%B0%203%EB%8C%80%20%EA%B5%AC%EC%84%B1%20%EC%9A%94%EC%86%8C%20%EC%9D%B4%ED%95%B4.md)
 
